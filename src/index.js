@@ -5,10 +5,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import HttpsRedirect from 'react-https-redirect';
 ReactDOM.render(
   // <React.StrictMode>
   <Provider store={store}>
-    <App />
+    <HttpsRedirect>
+      <App />
+    </HttpsRedirect>
   </Provider>,
   /* </React.StrictMode> */
   document.getElementById('root')
