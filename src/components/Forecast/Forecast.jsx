@@ -23,7 +23,7 @@ const StyledForecast = styled.div`
 `;
 const ForecastCard = styled.div`
   box-sizing: border-box;
-  background-color: rgba(255, 177, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 10px 10px;
   padding: 10px 10px;
   border-radius: 10px;
