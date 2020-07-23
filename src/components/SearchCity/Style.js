@@ -14,6 +14,9 @@ export const SearchInput = styled.input`
   &::placeholder {
     color: lightgray;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Search = styled.div`
@@ -24,7 +27,7 @@ export const Search = styled.div`
 
 export const Icon = styled.span`
   position: absolute;
-  margin-top: 6px;
+  margin-top: 7px;
   margin-left: 7px;
   color: lightgray;
 `;

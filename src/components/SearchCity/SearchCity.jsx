@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setSearchInputValue } from '../../redux/actions/search';
 import { fetchWeatherDataForCity } from '../../redux/actions/weather';
 import { fetchForecastForCity } from '../../redux/actions/forecast';
-
+import searchSvg from '../../assets/search-solid.svg';
 const SearchCity = () => {
   const value = useSelector(({ search }) => search.value);
   const dispatch = useDispatch();
@@ -27,7 +27,8 @@ const SearchCity = () => {
     <Search>
       <form onSubmit={submitForm}>
         <Icon>
-          <i className='fa fa-search'></i>
+          {/* <i className='fa fa-search'></i> */}
+          <img src={searchSvg} alt='search' width='15'/>
         </Icon>
         <SearchInput
           ref={input}

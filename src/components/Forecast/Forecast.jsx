@@ -8,15 +8,17 @@ const StyledForecast = styled.div`
   color: white;
   display: flex;
   overflow-x: auto;
-  ::-webkit-scrollbar {
-    margin-top: 2px;
-    height: 4px; /* height of horizontal scrollbar ← You're missing this */
-    width: 4px; /* width of vertical scrollbar */
-    border: 1px solid black;
-  }
-  ::-webkit-scrollbar-thumb:horizontal {
-    background: white;
-    border-radius: 10px;
+
+  @media (min-width: 769px) {
+    ::-webkit-scrollbar {
+      margin-top: 2px;
+      height: 15px;
+      width: 5px;
+    }
+    ::-webkit-scrollbar-thumb:horizontal {
+      background: white;
+      border-radius: 10px;
+    }
   }
 `;
 const ForecastCard = styled.div`
@@ -37,10 +39,10 @@ const ForecastCard = styled.div`
 `;
 
 const Forecast = ({ forecastData }) => {
-  const forecast = forecastData.map(({ dt, main, description, weather }) => {
+  const forecast = forecastData.map(({ dt, main, weather }) => {
     weather = weather[0];
     return (
-      <ForecastCard>
+      <ForecastCard key={dt + main.temp}>
         <div>
           <p>{dateFormatter(dt)}</p>
           <p>{timeFormatter(dt)}</p>

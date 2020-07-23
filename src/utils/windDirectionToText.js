@@ -9,5 +9,5 @@ export const windDirectionToText = (direction) => {
   if (direction > 22.5) {
     return 'Северо-Восточный';
   }
-  // return 'Northerly';
+  return 'Cеверный';
 };
