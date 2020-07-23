@@ -18,7 +18,7 @@ const Weather = ({ name, main, weather, wind, dt, sys }) => {
     <StyledWeather>
       <Temperature>
         <img
-          src={`http://openweathermap.org/img/wn/${weather[0].icon}@4x.png`}
+          src={`https://openweathermap.org/img/wn/${weather[0].icon}@4x.png`}
           alt='weather'
         />
         <div>

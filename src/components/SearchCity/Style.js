@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchInput = styled.input`
+  /* font-family: 'Montserrat', sans-serif; */
   border: none;
   width: 50%;
   border-radius: 20px;
