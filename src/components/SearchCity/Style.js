@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const SearchInput = styled.input`
+  font-family: 'Montserrat';
+  font-weight: normal;;
   border: none;
   width: 50%;
   border-radius: 20px;
   height: 35px;
-  padding-top: 4px;
+  padding-top: 2px;
   padding-left: 35px;
   font-size: 18px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),

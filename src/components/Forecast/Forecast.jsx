@@ -34,7 +34,7 @@ const ForecastCard = styled.div`
   justify-content: space-between;
   p {
     color: black;
-    font-weight: 600;
+    font-weight: bold;
   }
 `;
 
