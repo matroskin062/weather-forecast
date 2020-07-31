@@ -1,11 +1,14 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchWeatherData } from './redux/actions/weather';
-import Weather from './components/Weather/Weather';
-import SearchCity from './components/SearchCity/SearchCity';
 import { fetchForecast } from './redux/actions/forecast';
-import Forecast from './components/Forecast/Forecast';
-import Header from './components/Header/Header';
+
+const Weather = React.lazy(() => import('./components/Weather/Weather'));
+const SearchCity = React.lazy(() =>
+  import('./components/SearchCity/SearchCity')
+);
+const Forecast = React.lazy(() => import('./components/Forecast/Forecast'));
+const Header = React.lazy(() => import('./components/Header/Header'));
 
 function App() {
   const dispatch = useDispatch();
@@ -31,18 +34,20 @@ function App() {
 
   return (
     <div className='weather-app'>
-      <Header />
-      <SearchCity />
-      {!weatherData && error ? (
-        <h1>Невозомжно определить местоположение: </h1>
-      ) : null}
-      {weatherData && (
-        <>
-          <h1 className='title'>{weatherData.name}</h1>
-          <Weather {...weatherData} />
-          {forecastData && <Forecast forecastData={forecastData} />}
-        </>
-      )}
+      <React.Suspense fallback=''>
+        <Header />
+        <SearchCity />
+        {!weatherData && error ? (
+          <h1>Невозомжно определить местоположение: </h1>
+        ) : null}
+        {weatherData && (
+          <>
+            <h1 className='title'>{weatherData.name}</h1>
+            <Weather {...weatherData} />
+            {forecastData && <Forecast forecastData={forecastData} />}
+          </>
+        )}
+      </React.Suspense>
     </div>
   );
 }

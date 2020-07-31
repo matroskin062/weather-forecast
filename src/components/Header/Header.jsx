@@ -11,7 +11,7 @@ const Header = () => {
       setDate(dateNow());
     }, 5000);
   }, [date]);
-  
+
   return (
     <StyledHeader>
       <Title>Weather Forecast</Title>
@@ -20,4 +20,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
