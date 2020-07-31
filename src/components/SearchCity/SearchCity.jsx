@@ -27,7 +27,6 @@ const SearchCity = () => {
     <Search>
       <form onSubmit={submitForm}>
         <Icon>
-          {/* <i className='fa fa-search'></i> */}
           <img src={searchSvg} alt='search' width='15' />
         </Icon>
         <SearchInput

@@ -6,6 +6,8 @@ const StyledWeather = styled.div`
   justify-content: space-between;
   @media (max-width: 768px) {
     flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 10px;
   }
   @media (max-width: 576px) {
     font-size: 13px;

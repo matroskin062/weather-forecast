@@ -15,7 +15,7 @@ body {
   position: relative;
   scroll-behavior: smooth;
   min-height: 100vh;
-  background: url(./assets/ploskiy-1920x1080-les-4k-5k-iphone-oboi-olen-abstrakciya-11925.webp);
+  background: url(./assets/bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -39,3 +39,5 @@ code {
 .title {
   text-align: center;
 }
+
+
