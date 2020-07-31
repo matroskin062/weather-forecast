@@ -17,19 +17,18 @@ body {
 }
 body::-webkit-scrollbar {
   display: none;
+  min-height: 100vh;
 }
 body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  /* height: 100%;
-  width: 100%; */
-  background-image: url(./assets/ploskiy-1920x1080-les-4k-5k-iphone-oboi-olen-abstrakciya-11925.jpg);
+  height: 100%;
+  width: 100%;
+  background-image: url(./assets/ploskiy-1920x1080-les-4k-5k-iphone-oboi-olen-abstrakciya-11925.webp);
   background-repeat: no-repeat;
-  /* background-position: center; */
+  background-position: center;
   background-size: cover;
 }
 

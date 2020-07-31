@@ -5,23 +5,23 @@ import Weather from './components/Weather/Weather';
 import SearchCity from './components/SearchCity/SearchCity';
 import { fetchForecast } from './redux/actions/forecast';
 import Forecast from './components/Forecast/Forecast';
-import Axios from 'axios';
+import Header from './components/Header/Header';
 
 function App() {
   const dispatch = useDispatch();
   const weatherData = useSelector(({ weather }) => weather.data);
   const forecastData = useSelector(({ forecast }) => forecast.data);
   const [error, setError] = React.useState(false);
-  const locationSuccess = ({ coords }) => {
-    const params = {
-      lat: coords.latitude,
-      lon: coords.longitude,
-    };
-    dispatch(fetchWeatherData(params));
-    dispatch(fetchForecast(params));
-  };
 
   React.useEffect(() => {
+    const locationSuccess = ({ coords }) => {
+      const params = {
+        lat: coords.latitude,
+        lon: coords.longitude,
+      };
+      dispatch(fetchWeatherData(params));
+      dispatch(fetchForecast(params));
+    };
     navigator.geolocation.getCurrentPosition(
       locationSuccess,
       () => setError(true),
@@ -31,6 +31,7 @@ function App() {
 
   return (
     <div className='weather-app'>
+      <Header />
       <SearchCity />
       {!weatherData && error ? (
         <h1>Невозомжно определить местоположение: </h1>

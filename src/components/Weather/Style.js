@@ -27,8 +27,8 @@ const Temperature = styled.div`
     h1 {
       font-size: 16px;
     }
-    h3{
-      font-size: 13px
+    h3 {
+      font-size: 13px;
     }
   }
 `;

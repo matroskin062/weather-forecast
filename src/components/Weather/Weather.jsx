@@ -2,12 +2,12 @@ import React from 'react';
 import { Temperature, StyledWeather, CommonInfo } from './Style';
 import { timeFormatter } from '../../utils/timeFormatter';
 import { windDirectionToText } from '../../utils/windDirectionToText';
-import humiditySvg from '../../assets/humidity.svg';
-import windSvg from '../../assets/wind.svg';
-import pressureSvg from '../../assets/pressure.svg';
-import sunriseSvg from '../../assets/sunrise.svg';
-import sunsetSvg from '../../assets/sunset.svg';
-import windDirSvg from '../../assets/wind-direction.svg';
+import humiditySvg from '../../assets/humidity_min.svg';
+import windSvg from '../../assets/wind_min.svg';
+import pressureSvg from '../../assets/pressure__min.svg';
+import sunriseSvg from '../../assets/sunrise_min.svg';
+import sunsetSvg from '../../assets/sunset_min.svg';
+import windDirSvg from '../../assets/wind-direction_min.svg';
 
 const Weather = ({ name, main, weather, wind, dt, sys }) => {
   const { temp, feels_like, humidity, pressure } = main;
