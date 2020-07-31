@@ -25,8 +25,8 @@ export const SearchInput = styled.input`
 
 export const Search = styled.div`
   text-align: center;
-  margin-bottom: 50px;
-  padding: 0;
+  /* margin-bottom: 50px; */
+  margin: 0;
   form {
     display: block;
     position: relative;
