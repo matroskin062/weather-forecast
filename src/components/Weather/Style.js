@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledWeather = styled.div`
-  margin: 40px auto;
+  margin: 40px auto;  
   display: flex;
   justify-content: space-between;
   @media (max-width: 768px) {
@@ -34,6 +34,7 @@ const Temperature = styled.div`
     }
   }
 `;
+
 const CommonInfo = styled.div`
   flex: 50%;
   color: white;
