@@ -15,7 +15,9 @@ const Header = () => {
   return (
     <StyledHeader>
       <Title>Weather Forecast</Title>
-      <Date>{date}</Date>
+      <Date>
+        <p>{date}</p>
+      </Date>
     </StyledHeader>
   );
 };

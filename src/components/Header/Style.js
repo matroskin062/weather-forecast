@@ -22,4 +22,5 @@ export const Title = styled.h1`
 export const Date = styled.p`
   color: white;
   font-size: 24px;
+  word-spacing: 40px;
 `;

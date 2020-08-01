@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledWeather = styled.div`
-  margin: 40px auto;  
+  margin: 40px auto;
   display: flex;
   justify-content: space-between;
   @media (max-width: 768px) {
@@ -15,11 +15,12 @@ const StyledWeather = styled.div`
 `;
 
 const Temperature = styled.div`
-  flex: 50%;
+  flex-basis: 50%;
   display: flex;
   color: black;
   align-items: center;
   margin-right: 15px;
+  text-align: justify;
   @media (max-width: 576px) {
     img {
       width: 45%;
@@ -36,7 +37,7 @@ const Temperature = styled.div`
 `;
 
 const CommonInfo = styled.div`
-  flex: 50%;
+  flex-basis: 50%;
   color: white;
   background-color: rgba(0.5, 0.5, 0.5, 0.5);
   border-radius: 10px;

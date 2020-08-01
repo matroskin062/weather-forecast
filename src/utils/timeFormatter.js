@@ -12,5 +12,7 @@ export const dateNow = () => {
   const now = new Date(Date.now());
   return `${now.getDate()}.${('0' + (+now.getMonth() + 1)).substr(
     -2
-  )} ${now.getHours()}:${('0' + now.getMinutes()).substr(-2)}`;
+  )}.${now.getFullYear()} ${now.getHours()}:${('0' + now.getMinutes()).substr(
+    -2
+  )}`;
 };
