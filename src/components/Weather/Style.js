@@ -20,7 +20,7 @@ const Temperature = styled.div`
   color: black;
   align-items: center;
   margin-right: 15px;
-  text-align: justify;
+  text-align: center;
   @media (max-width: 576px) {
     img {
       width: 45%;
